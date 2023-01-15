@@ -4,17 +4,18 @@
 		enhanced,
 		valign=center, 
 		interior style={
-			top color=colorPer1,
-			bottom color=colorPer1
+			top color=white,
+			bottom color=white
 		}, 
-		bottom=0.5cm, 
-		left=0.5cm, 
-		top=0.5cm,
+		bottom=1cm, 
+		right=0.8cm, 
+		left=0.8cm, 
+		top=1cm,
 		sharp corners=all, 
-		frame hidden,
-		opacityback=1,
-		width=12.2cm, 
-		% drop shadow southwest
+		opacityback=0.8,
+		width=380pt,
+		colframe=colorPer1!75!black,
+		drop shadow southwest
 	}
 }
 \tcbset{
@@ -26,23 +27,24 @@
 	}
 }
 \newcommand{\printcontentcover}{
+	\vspace{6.5cm}
 	\begin{tcolorbox}[bannerCoverSyle]
 		{%
-			\color{white}
+			\color{colorPer1}
 			{\Huge\textbf{\printtitle}} \\
 			{\Large\printauthor} \\
 			% \rule{\paperwidth}{1pt}
 		}
 		\begin{flushright}
 			{
-				\color{white} 
+				\color{colorPer1} 
 				\checkdofor{printedicion}{
 					\huge\textbf{\printedicion}\hspace{1cm}
 				}{}
 			}
 		\end{flushright}
 	\end{tcolorbox} 
-	\begin{tcolorbox}[bannerLogoCoverSyle, transparent, width = 8cm, flush right]
+	\begin{tcolorbox}[bannerLogoCoverSyle, transparent, height = 5cm, flush right]
 		\checkdofor{printlogo}{
 			\printlogo
 		}{}
