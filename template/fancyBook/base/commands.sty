@@ -10,7 +10,11 @@
 }
 %------------------------------------
 \newboolean{booleanActiveAppendix}
+\newboolean{forceTitle}
 \let\@typeappendix\relax
+\newcommand\forcetitlechapter[1]{%
+	\setboolean{forceTitle}{#1}
+}
 \newcommand\typeappendix[1]{%
 	\setboolean{booleanActiveAppendix}{#1}
 }
@@ -37,6 +41,7 @@
 	\nochapterimage
 	\nochapterauthor
 	\typeappendix{false}
+	\forcetitlechapter{false}
 }
 \newenvironment{infoauthorarticlebox}{
 	\begin{tcolorbox}[dataSheetStyle]
