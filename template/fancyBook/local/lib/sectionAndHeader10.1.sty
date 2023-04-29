@@ -9,10 +9,11 @@
         \color{lineaHeader}%
         \hrule width\headwidth height\headrulewidth depth\headrulewidth
     }
-    \fancyhf{} %quita enumaracion de abajo
-    \fancyhead[LE,RO]{
-        \normalsize\colorbox{backNumeroHeader}{\color{colorNumeroHeader}\sffamily\strut\quad\thepage\quad}
-    }
+    \fancyhf{}
+    \fancyfoot[RO,LE]{\thepage} 
+    % \fancyhead[LE,RO]{
+    %     \normalsize\colorbox{backNumeroHeader}{\color{colorNumeroHeader}\sffamily\strut\quad\thepage\quad}
+    % }
     \fancyhead[LO]{
     	\ifnum\value{logicHeader}>0 
     		{\textcolor{textHeader}{\textHeaderDef{\thechapter}}}
@@ -27,10 +28,21 @@
     		{\textcolor{textHeader} \leftmark}% 
     	\fi
     }
-%\setcounter{secnumdepth}{0} %elimina numeral de seccion
+
+
+\fancypagestyle{plain}{
+    \fancyhf{} 
+    \fancyfoot[RO,LE]{\thepage} 
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+
 \sectionfont{\color{textSec}}
 \subsectionfont{\color{textSubSec}}
-\subsubsectionfont{\color{textSubSubSec}}%este comando es de sectsty
+\subsubsectionfont{\color{textSubSubSec}} % este comando es de sectsty
+
+
+
 %-------------------------------------------
 % FIN seccion y header 
 %-------------------------------------------
