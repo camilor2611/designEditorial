@@ -1,8 +1,10 @@
 \newif{\ifbibunits}
 \newif{\ifnotindentall}
 \newif{\ifnumeralchapter}
+\newif{\ifpageonheader}
 \newif{\ifcoverpagecontent}
 \newif{\ifindexmake}
+\newif{\ifpagefootcenter}
 \numeralchaptertrue
 \notindentalltrue
 \coverpagecontenttrue
@@ -22,6 +24,8 @@
 	numeralChapter/.is if=numeralchapter,
 	coverpage/.is if=coverpagecontent,
 	indexMake/.is if=indexmake,
+	pageOnHeader/.is if=pageonheader,
+	pageFootCenter/.is if=pagefootcenter,
 	theme/.initial= book,
 	theme/.get=\themetemplate,
 	theme/.store in=\themetemplate,

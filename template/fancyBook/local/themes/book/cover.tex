@@ -1,5 +1,6 @@
-\renewcommand{\thepage}{Cover}
+
 \begin{coverpage}
+	\renewcommand{\thepage}{Cover}
 	\noindent
 	\IfFileExists{\pathtemplate/\compilefrom/themes/\namefoldertheme/cover.png}{
 		\AddToShipoutPicture*{
@@ -8,11 +9,12 @@
 			}
 		}
 	}{}
-	\checkdofor{printcontentcover}{
-		\printcontentcover
-	}{
-		\begin{tcolorbox}
-			There isn't def printcontentcover in src/initialVariable.sty
-		\end{tcolorbox}
-	}
+	\printcontentcover
+	% \checkdofor{printcontentcover}{
+	% 	\printcontentcover
+	% }{
+	% 	\begin{tcolorbox}
+	% 		There isn't def printcontentcover in src/initialVariable.sty
+	% 	\end{tcolorbox}
+	% }
 \end{coverpage}
