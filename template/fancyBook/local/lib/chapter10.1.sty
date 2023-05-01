@@ -1,16 +1,16 @@
 %-------------------------------------------
 % INICIO chapter
 %-------------------------------------------
-%\RequirePackage[printwatermark]{xwatermark}
-%\newsavebox\mybox
-%\savebox\mybox{\tikz[color=colorPer1,opacity=0.7]\node{Vista Preliminar};}
-%\newwatermark*[
-%	allpages,
-%	angle=45,
-%	scale=3,
-%	xpos=0,
-%	ypos=20
-%]{\usebox\mybox}
+\RequirePackage[printwatermark]{xwatermark}
+\newsavebox\mybox
+\savebox\mybox{\tikz[color=colorPer1,opacity=0.7]\node{Vista Preliminar};}
+\newwatermark*[
+	allpages,
+	angle=45,
+	scale=7,
+	xpos=-30,
+	ypos=45
+]{\usebox\mybox}
 %-------Verifica que existe imagen----------
 %\RequirePackage[printwatermark]{xwatermark}
 %\newwatermark*[allpages,color=gray,angle=45,scale=3,xpos=0,ypos=20]{Vista Preliminar}
@@ -79,7 +79,7 @@
 }
 \newcounter{TempChapter}%correccion titulos \chapter*
 \setcounter{TempChapter}{-1}%correccion titulos \chapter*
-\titleformat{\chapter}[display]{\normalfont\sffamily}{
+\titleformat{\chapter}[display]{\bfseries\normalfont}{
   \begin{tcolorbox}[frame hidden, sharpish corners, left=-0.14cm, top=-4.5cm, height=2.55cm]
     \begin{tcolorbox}[chapterBannerStyle,	chapterBannerImagenStyle]
       \begin{tcolorbox}[contentChapterStyle]
