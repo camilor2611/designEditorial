@@ -1,0 +1,57 @@
+\typeappendix{true}
+\chapterauthor{Brayan Riveros}
+\chapter{Estándares}\label{cap:estandares}
+Antes de mencionar los estándares del código que deben usarse con esta plantilla, tenga en cuenta que no son obligatorios, aun así veamos que es la notación Camel Case\pap 
+Camel case es una notación que nos permite nombrar las variables, funciones o clases en un lenguaje de programación, esta a su vez se divide en dos casos UpperCamelCase y lowerCamelCase.\pap
+\textbf{UpperCamelCase}.
+La escritura utilizando UpperCamelCase es iniciar en mayúscula cada palabra que compone el nombre de la variable, sin olvidar que esta no puede tener espacios ni caracteres especiales.\pap 
+\textbf{lowerCamelCase}.
+La escritura utilizando lowerCamelCase es iniciar en minúscula cada palabra que compone el nombre de la variable, sin olvidar que esta no puede tener espacios ni caracteres especiales.
+\section{Comandos}
+Recuerde que la estructura de un comando es:
+\begin{center}
+	\begin{tcblisting}{boxlatex}
+		\newcommand{\nombreDeComando}[<arguments number>]{<function>}
+	\end{tcblisting}
+\end{center}
+Para nombrar correctamente los comandos se usará la notación lowerCamelCase
+\subsubsection{Referencias}
+Todas las referencias de la mayor parte de los entornos tienen un prefijo, esto conlleva a una buena organización y previene el conflicto de referencias iguales para entornos diferentes.
+\begin{freebox}[Convención]
+	Algunas referencias no dependen da la plantilla como lo es el caso de los capítulos y ecuaciones, por ello se recomienda seguir el siguiente  estándar: 
+	\begin{itemize}
+		\item Capítulo. \verb|\label{chapter:<nombre>}|.
+		\item Sección. \verb|\label{sec:<nombre>}|
+		\item Ecuación. \verb|\label{eqn:<nombre>}|.
+		\item Item. \verb|\label{itm:<nombre>}|.
+		\item Imagen. \verb|\label{fig:<nombre>}|.
+		\item Bibliografía. \verb|\label{bib:<nombre>}| o \verb|\label{book:<nombre>}|.
+		\item Tabla. \verb|\label{tab:<nombre>}|.
+	\end{itemize}
+	\begin{freebox}[Nota]
+		Para el \verb|<nombre>| utilizaremos la estandarización lowerCamelCase. 
+	\end{freebox}
+\end{freebox}
+\subsubsection{Estándar de nombres de archivos}
+Para los nombres de todos los archivos del autor (incluyendo imágenes y código \LaTeX) no se utilizará espacios ni caracteres especiales, entonces seguiremos el estándar lowerCamelCase, por ejemplo 
+\begin{center}
+	\textbf{algebraLineal.tex} o \textbf{cuboRubik.png.}
+\end{center}
+\begin{freebox}[Nota]
+	Los nombres de los archivos utiliza el idioma en el que esta redactado el documento.
+\end{freebox}
+\newpage
+\section{Sangrado (Indentación)}
+El contenido de los entornos debe iniciar con una tabulación, así como se muestra en el siguiente código:
+\begin{tcblisting}{boxlatex}
+	\begin{<entorno>}
+		Contenido del entorno.
+	\end{<entorno>}
+\end{tcblisting}
+De forma similar en las ecuaciones se realizan las respectivas tabulaciones en el símbolo \& tal como se observa en el siguiente código: 
+\begin{tcblisting}{boxlatex}	
+	\begin{align*}
+		(a+b)c&=(a+b)\cdot c\\
+			    &=ac+bc.
+	\end{align*}
+\end{tcblisting}

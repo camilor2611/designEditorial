@@ -1,0 +1,60 @@
+{
+	\justifying
+	\chapterauthor{Brayan Riveros}%Puede ser nombre simplificado
+	\chapterimage{jpg/robertOppenheimer.jpg}{3cm}
+	\chapter{Guía de usuario}\label{cap:guiaDeUsuario}
+	\epigraph{Now, I am become Death, the destroyer of worlds.}{--- \textup{Robert Oppenheimer}}
+	\section{Estructura del autor}
+		\lettrine[lines=2, nindent=0em]{U}{na} vez realizada la instalación de la plantilla 
+		y siguiendo con nuestro ejemplo de la creación del artículo \comillas{ecuación de difusión} cuya carpeta es \textbf{ecuacionDeDifusion} se tiene las siguientes lineas en el archivo \textbf{main.tex}
+		\pap
+		\begin{tcblisting}{boxlatex}
+			\def\ecuacionDeDifusion{articles/ecuacionDeDifusion}
+			\def\ecuacionDeDifusionImages{\ecuacionDeDifusion/images}
+		\end{tcblisting}
+	  	Estos comandos nos sirven para la ruta del artículo y la ruta de las imágenes que usará el autor respectivamente. También consideramos la estructura básica con los siguientes archivos del autor.
+		\begin{figure}[ht]
+			\dirtree{%
+				.1 {\color{colorPer1}\faFolder} CopiaDeTrabajo.
+				.2 {\color{colorPer1}\faFolder} articles.
+				.3 {\color{colorPer1}\faFolder} ecuacionDeDifusion.
+				.4 {\color{colorPer1}\faFolder} images.
+				.5 {\color{colorPer1}\faFolder} png.
+				.6 {\color{colorPer1}\faImage} robertOppenheimer.png.
+				.4 {\color{colorPer1}\faFolder} src.
+				.4 {\color{colorPer1}\faFileCodeO} article.tex.
+				.4 {\color{colorPer1}\faFileCodeO} load.sty.
+				.2 {\color{colorPer1}\faFolder} DesignEditorial10.
+				.2 {\color{colorPer1}\faFolder} images.
+				.2 {\color{colorPer1}\faFolder} references.
+				.3 {\color{colorPer1}\faFileCodeO} ecuacionDeDifusion.bib.
+				.2 {\color{colorPer1}\faFolder} settings.
+				.2 {\color{colorPer1}\faFolder} src.
+				.2 {\color{colorPer1}\faFileCodeO} main.tex.
+			}	
+			\caption{Estructura de carpetas del autor}
+			\label{fig:EstructuraDeAutor}
+		\end{figure}
+	\section{Artículo personalizado}
+	Antes de iniciar la redacción de cualquier artículo entendamos la estructura básica del mismo, el archivo \textbf{article.tex} debe ser similar a
+	\begin{tcblisting}{boxlatex}
+	{\justifying
+		\chapterauthor{<Autor>}
+		\chapter{<nombre del articulo>}\label{art:<nombre upperCamelCase>}
+	}\cleanalldata
+	\end{tcblisting}
+	Los siguientes datos son los que se mostrarán en el encabezado del artículo
+	\begin{center}
+		<autor>  = Nombre del autor, como guste el autor.\\  
+		<nombre del articulo> = Es el nombre del artículo completo.\\
+	\end{center}
+	El comando \verb|\label| es la referencia del artículo y debe ser escrito en lowerCamelCase (ver apartado \ref{cap:estandares} estándares).\pap
+	Así que siguiendo con nuestro ejemplo tendríamos algo de esta forma
+	\begin{tcblisting}{boxlatex}
+		{\justifying
+			\chapterauthor{Brayan Riveros}
+			\chapter{Ecuación de difusión}\label{art:ecuacionDeDifusion}
+		}\cleanalldata
+	\end{tcblisting}
+%	\putbib % muestra la bibliografia
+}

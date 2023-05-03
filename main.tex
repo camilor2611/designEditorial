@@ -1,21 +1,26 @@
-\documentclass[11pt,oneside]{book}%  
+\documentclass[11pt, twoside]{book}%  
 \usepackage[english, activeacute]{babel}%important you can change language
 \usepackage[utf8]{inputenc}%set input encoding
+\usepackage{emptypage} 
 \usepackage{lib/designAcademycos}
 \designacademycos{
-	root=/, 
+	root=./, 
 	template=fancyBook,
 	download=false
 }
 \usepackage[T1]{fontenc}
 \usepackage[light,math]{kurier}%http://www.tug.dk/FontCatalogue/
 \usepackage{src/initialVariables}
+\usepackage{src/customCommands}
+\usepackage{\pathroot plugin/highlighting}
+\usepackage{\pathroot plugin/folderTree}
 %\usepackage{\pathrootplugins marginsPrint}%plugins
 %\usepackage{\pathrootplugins compilationInfo}%plugins
 \datemplate{
 	indexMake=true,
+	pageOnHeader=true
 }
-\usepackage{lipsum}
+% \usepackage{lipsum}
 \begin{document}
 %	\BgThispage %plugin  marginsPrint
 	\import{\pathtemplate/\compilefrom/themes/\namefoldertheme/}{cover.tex}%you should change the file src/initialVariables
@@ -23,7 +28,12 @@
 		\import{\pathtemplate/\compilefrom/themes/\namefoldertheme/}{beginning.tex}
 		\tableofcontents
 	\mainmatter
-	\import{chapters/}{newChapter.tex}
+	\import{chapters/docs/}{newChapter.tex}
+	\cleanalldata
+	\chapter*{Capítulo no enumerado}
+	\appendix
+		\import{chapters/docs/}{estandares.tex}
+		\cleanalldata
 %	\bibliography{references/bibliography}
 %	\bibliographystyle{unsrt}
 %	\printCompilationInfo %plugin compilationInfo

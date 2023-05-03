@@ -1,6 +1,7 @@
 documents
 quickStart
 *pythontex-files-main
+*.xwm
 *.log
 *.aux
 *.dvi
