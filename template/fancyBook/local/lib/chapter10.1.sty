@@ -11,9 +11,7 @@
 	xpos=-30,
 	ypos=45
 ]{\usebox\mybox}
-%-------Verifica que existe imagen----------
-%\RequirePackage[printwatermark]{xwatermark}
-%\newwatermark*[allpages,color=gray,angle=45,scale=3,xpos=0,ypos=20]{Vista Preliminar}
+% -------Verifica que existe imagen----------
 \IfFileExists{./\pathtemplate/\compilefrom/themes/\namefoldertheme/banner.png}{
   \tcbset{
     chapterBannerImagenStyle/.style={
