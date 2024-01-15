@@ -74,3 +74,11 @@
 		\import{\pathtemplate/\compilefrom/themes/\namefoldertheme/}{cover.tex}
 	}
 }
+
+\newcommand\getcoverpage{
+\ifcoverpagecontent
+	\begin{coverpage}
+		\printcontentcoverpage
+	\end{coverpage}
+\fi
+}
