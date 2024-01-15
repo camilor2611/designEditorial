@@ -14,13 +14,14 @@
 \usepackage{src/initialVariables}
 \usepackage{src/customCommands}
 \usepackage{\pathroot plugin/highlighting}
+\usepackage{\pathroot plugin/exercisesQuestionsAnswers}
 \usepackage{\pathroot plugin/folderTree}
 \datemplate{
 	indexMake=true,
-	pageOnHeader=true
+	pageOnHeader=false
 }
 \begin{document}
-	\import{\pathtemplate/\compilefrom/themes/\namefoldertheme/}{cover.tex}
+	\getcover
 	\frontmatter
 		\import{\pathtemplate/\compilefrom/themes/\namefoldertheme/}{beginning.tex}
 		\tableofcontents

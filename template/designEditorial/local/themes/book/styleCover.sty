@@ -4,8 +4,8 @@
 		enhanced,
 		valign=center, 
 		interior style={
-			top color=paletteOne,
-			bottom color=paletteOne
+			top color=backContentCover,
+			bottom color=backContentCover
 		}, 
 		bottom=0.5cm, 
 		left=0.5cm, 
@@ -25,23 +25,15 @@
 		frame hidden,		
 	}
 }
+
 \newcommand{\printcontentcover}{
-	\vspace{8cm}
 	\begin{tcolorbox}[bannerCoverSyle]
-		{%
-			\color{white}
-			{\Huge\textbf{\printtitle}} \\
-			{\Large\printauthor} \\
-			% \rule{\paperwidth}{1pt}
+		{
+			\color{textContentCover}
+			{\Huge\textbf{\printtitle}}\\
+			\vspace{1cm}
+			{\huge\printauthor} \\
 		}
-		\begin{flushright}
-			{
-				\color{white} 
-				\checkdofor{printedition}{
-					\huge\textbf{\printedition}\hspace{1cm}
-				}{}
-			}
-		\end{flushright}
 	\end{tcolorbox}
 	\vspace{2cm}
 	\begin{tcolorbox}[bannerLogoCoverSyle, transparent, width = 8cm, flush right]
@@ -50,6 +42,7 @@
 		}{}
 	\end{tcolorbox}
 }
+
 \newcommand\printcontentcoverpage{
 	\begin{tcolorbox}[transparent, width = \textwidth]
 		\begin{center}
@@ -72,4 +65,12 @@
 			\printlogo
 		}{}
 	\end{figure*}
+}
+
+\newcommand\getcover{
+	\IfFileExists{./src/cover/cover.tex}{
+		\import{./src/cover/}{cover.tex}
+	}{
+		\import{\pathtemplate/\compilefrom/themes/\namefoldertheme/}{cover.tex}
+	}
 }

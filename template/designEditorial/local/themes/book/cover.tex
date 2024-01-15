@@ -2,12 +2,12 @@
 \begin{coverpage}
 	\renewcommand{\thepage}{Cover}
 	\noindent
-	\IfFileExists{\pathtemplate/\compilefrom/themes/\namefoldertheme/cover.png}{
-		\AddToShipoutPicture*{
-			\put(-2,0){
-				\includegraphics[width=\paperwidth]{\pathtemplate/\compilefrom/themes/\namefoldertheme/cover.png}
-			}
-		}
-	}{}
-	% \printcontentcover
+	\pagecolor{backPageCover}\afterpage{\nopagecolor}
+	\checkdofor{printcontentcover}{
+		\printcontentcover
+	}{
+		\begin{tcolorbox}
+			There isn't def printcontentcover in src/initialVariable.sty
+		\end{tcolorbox}
+	}
 \end{coverpage}
