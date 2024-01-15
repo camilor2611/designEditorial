@@ -1,0 +1,39 @@
+{
+	\justifying
+	\chapter{Entornos}\label{cap:guiaDeUsuario}
+	Los siguientes entornos tienen dos argumentos obligatorios, si no se desea utilizar los argumentos se deben dejar en blanco, esto es \{\}\{\}. El primer argumento es el nombre del entorno y el segundo es la llave (key) de la referencia, vemos los entornos más usuales. 
+	\begin{tcblisting}{boxlatex}
+		\begin{theorem}{Lema de Zorn}{lemaZorn}
+			Contenido lema
+		\end{theorem}
+		Para referenciar el lema se utiliza \ref{lem:lemaZorn}
+	\end{tcblisting}
+	Ejemplo
+	\begin{theorem}{Teorema fundamental del Cálculo}{TFC}
+		Contenido
+	\end{theorem}
+	Según teorema	\ref{th:TFC} obtenemos ...
+	
+	\begin{tcblisting}{boxlatex}
+		\begin{lemma}{Lema de Zorn}{lemaZorn}
+			Contenido lema
+		\end{lemma}
+		Para referenciar el lema se utiliza \ref{lem:lemaZorn}
+	\end{tcblisting}
+	Ejemplo
+	\begin{lemma}{Lema de Zorn}{lemaZorn}
+		Contenido lema
+	\end{lemma}
+	Según el lema \ref{lem:lemaZorn} obtenemos ...
+	\begin{proof}
+		Sea ...
+	\end{proof}
+	
+	\begin{example}{}{}
+		\lipsum[1]
+	\end{example}
+
+	\begin{solution}
+		\lipsum[1]
+	\end{solution}
+}

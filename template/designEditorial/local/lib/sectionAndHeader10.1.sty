@@ -6,13 +6,13 @@
 \newcommand{\textHeaderDef}[1]{#1.\textHeader}
     \pagestyle{fancy}
     \renewcommand{\headrule}{
-        \color{lineaHeader}%
+        \color{lineHeader}%
         \hrule width\headwidth height\headrulewidth depth\headrulewidth
     }
     \fancyhf{}
     \ifpageonheader
         \fancyhead[LE, RO]{
-            \normalsize\colorbox{backNumeroHeader}{\color{colorNumeroHeader}\sffamily\strut\quad\thepage\quad}
+            \normalsize\colorbox{backNumberHeader}{\color{numberHeader}\sffamily\strut\quad\thepage\quad}
         }
     \else
         \ifpagefootcenter
@@ -23,16 +23,16 @@
     \fi
     \fancyhead[LO]{
     	\ifnum\value{logicHeader}>0 
-    		{\textcolor{textHeader}{\textHeaderDef{\thechapter}}}
+    		{\textcolor{textHeaderOfPage}{\textHeaderDef{\thechapter}}}
     	\else 
-    		{\bfseries\textcolor{textHeader} \rightmark}% 
+    		{\bfseries\textcolor{textHeaderOfPage} \rightmark}% 
     	\fi
     }
     \fancyhead[RE]{
     	\ifnum\value{logicHeader}>0 
-    		{\textcolor{textHeader}{\textHeaderDef{\thechapter}}}
+    		{\textcolor{textHeaderOfPage}{\textHeaderDef{\thechapter}}}
     	\else 
-    		{\textcolor{textHeader} \leftmark}% 
+    		{\textcolor{textHeaderOfPage} \leftmark}% 
     	\fi
     }
 
@@ -52,9 +52,9 @@
 }
 
 
-\sectionfont{\color{textSec}}
-\subsectionfont{\color{textSubSec}}
-\subsubsectionfont{\color{textSubSubSec}} % este comando es de sectsty
+\sectionfont{\color{textSection}}
+\subsectionfont{\color{textSubsection}}
+\subsubsectionfont{\color{textSubsubsection}} % este comando es de sectsty
 
 
 

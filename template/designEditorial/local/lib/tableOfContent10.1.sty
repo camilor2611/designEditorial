@@ -4,7 +4,7 @@
 \tcbset{
     numeralCapStyle/.style={
         hbox,
-        colback=backTOCcap,
+        colback=backTocChapter,
         boxrule=0mm,
         sharpish corners,
         frame hidden,
@@ -22,13 +22,13 @@
 {}
 {
 	\hspace*{6pt}\hfill\hspace*{6pt}\bfseries\thecontentspage 
-}[\color{backTOCcap}\titlerule\addvspace{10pt}]
+}[\color{backTocChapter}\titlerule\addvspace{10pt}]
 
 %--------------capitulo--------
 \titlecontents{chapter}[0pc]{
     \addvspace{10pt}%
     \begin{tcolorbox}[numeralCapStyle]
-        \color{numeralTOCcap}\bfseries\huge  \thecontentslabel
+        \color{numeralTocChapter}\bfseries\huge  \thecontentslabel
     \end{tcolorbox}
 }
 {\huge}
@@ -36,7 +36,7 @@
 {
 %    \titlerule*[1.5mm]{.}       
 	\hspace*{6pt}\hfill\hspace*{6pt}\bfseries\thecontentspage 
-}[\color{backTOCcap}\titlerule\addvspace{10pt}]
+}[\color{backTocChapter}\titlerule\addvspace{10pt}]
 
 %---------------section-------
 \titlecontents{section}[1pc]{

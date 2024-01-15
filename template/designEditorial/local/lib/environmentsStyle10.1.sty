@@ -57,14 +57,14 @@
 \tcbset{
 	mythStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitleTheoU,
+		colbacktitle=backTitleTheorem,
 		interior style={
-			top color= backBoxContentTheoU,
-			bottom color= backBoxContentTheoD,
+			top color= backContentTheorem,
+			bottom color= backContentTheorem,
 		},
-		coltitle=colorTitleTheo,
+		coltitle=titleTheorem,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderTheo},
+		borderline={0mm}{0mm}{backTitleTheorem},
 %		show bounding box
 	}
 }
@@ -72,14 +72,14 @@
 \tcbset{
 	mydefStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitleDefU,
+		colbacktitle=backTitleDefinition,
 		interior style={
-			top color= backBoxContentDefU,
-			bottom color= backBoxContentDefD,
+			top color= backContentDefinition,
+			bottom color= backContentDefinition,
 		},
-		coltitle=colorTitleDef,
+		coltitle=titleDefinition,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderDef},
+		borderline={0mm}{0mm}{backTitleDefinition},
 		%		show bounding box
 	}
 }
@@ -87,14 +87,14 @@
 \tcbset{
 	mycorStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitleCorU,
+		colbacktitle=backTitleCorollary,
 		interior style={
-			top color= backBoxContentCorU,
-			bottom color= backBoxContentCorD,
+			top color= backContentCorollary,
+			bottom color= backContentCorollary,
 		},
-		coltitle=colorTitleCor,
+		coltitle=titleCorollary,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderCor},
+		borderline={0mm}{0mm}{backTitleCorollary},
 		%		show bounding box
 	}
 }
@@ -102,14 +102,14 @@
 \tcbset{
 	mylemStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitleLemU,
+		colbacktitle=backTitleLemma,
 		interior style={
-			top color= backBoxContentLemU,
-			bottom color= backBoxContentLemD,
+			top color= backContentLemma,
+			bottom color= backContentLemma,
 		},
-		coltitle=colorTitleLem,
+		coltitle=titleLemma,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderLem},
+		borderline={0mm}{0mm}{backTitleLemma},
 		%		show bounding box
 	}
 }
@@ -117,14 +117,14 @@
 \tcbset{
 	myproposiStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitleProposiU,
+		colbacktitle=backTitleProposition,
 		interior style={
-			top color= backBoxContentProposiU,
-			bottom color= backBoxContentProposiD,
+			top color= backContentProposition,
+			bottom color= backContentProposition,
 		},
-		coltitle=colorTitleProposi,
+		coltitle=titleProposition,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderProposi},
+		borderline={0mm}{0mm}{backTitleProposition},
 		%		show bounding box
 	}
 }
@@ -132,30 +132,30 @@
 \tcbset{
 	myobservationStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitleNotaU,
+		colbacktitle=backTitleObservation,
 		interior style={
-			top color= backBoxContentNotaU,
-			bottom color= backBoxContentNotaD,
+			top color= backContentObservation,
+			bottom color= backContentObservation,
 		},
 		fonttitle=\normalsize\bfseries,
-		coltitle=colorTitleNota,
+		coltitle=titleObservation,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderNota},
+		borderline={0mm}{0mm}{backTitleObservation},
 	}
 }
 %-----------------property-------------------
 \tcbset{
 	mypropStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitlePropU,
+		colbacktitle=backTitleProperty,
 		interior style={
-			top color= backBoxContentPropU,
-			bottom color= backBoxContentPropD,
+			top color= backContentProperty,
+			bottom color= backContentProperty,
 		},
 		fonttitle=\normalsize\bfseries,
-		coltitle=colorTitleProp,
+		coltitle=titleProperty,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderProp}
+		borderline={0mm}{0mm}{backTitleProperty}
 	}
 }
 %-----------------ejemplo----
@@ -171,7 +171,7 @@
 			top=4pt,
 			overlay={}
 		},
-		coltitle=textExam,
+		coltitle=textExample,
 		parbox=false,
 		boxsep=0pt,
 		left=0pt,
@@ -180,31 +180,25 @@
 		breakable,
 		pad at break*=0mm,
 		vfill before first,
-		overlay unbroken={
-			\draw[lineExam,line width=0.02cm]
-			([xshift=-0.5pt]frame.south east)--(frame.south west);
-		},
+		overlay unbroken={},
 		overlay first={},
 		overlay middle={},
-		overlay last={
-			\draw[lineExam,line width=0.02cm]
-			([xshift=-0.5pt]frame.south east)--(frame.south west);
-		},
+		overlay last={},
 	}
 }
 %-------------freebox-------------
 \tcbset{
 	myfreeboxStyle/.style={
 		generalStyle,
-		colbacktitle=backBoxTitleCajaU,
+		colbacktitle=backTitleFreeBox,
 		interior style={
-			top color= backBoxContentCajaU,
-			bottom color= backBoxContentCajaD,
+			top color= backContentFreeBox,
+			bottom color= backContentFreeBox,
 		},
 		fonttitle=\normalsize\bfseries,
-		coltitle=colorTitleCaja,
+		coltitle=titleFreeBox,
 		sharpish corners,
-		borderline={0mm}{0mm}{borderCaja},
+		borderline={0mm}{0mm}{backTitleFreeBox},
 	}
 }
 %---------------tablas----------
@@ -214,12 +208,11 @@
 		arc=0.5mm,boxrule=1mm,
 		frame hidden,
 		interior style={
-			top color= backBoxContentTablaU,
-			bottom color= backBoxContentTablaD,
+			top color= backContentTable,
+			bottom color= backContentTable,
 		},
 		fonttitle=\normalsize\bfseries,
-		borderline={0mm}{0mm}{borderTabla},
-		coltitle=colorTitleTabla,
+		coltitle=titleTable,
 		attach boxed title to top left={
 			xshift=2mm,
 			yshift=-0.50mm
@@ -228,11 +221,10 @@
 			skin=enhancedfirst jigsaw,
 			size=small,arc=0mm,bottom=0mm,
 			boxrule=0mm,
-			borderline={0mm}{0mm}{colorBorderTitleTabla},
 			interior style={
 				fill=none,
-				top color=backBoxTitleTablaU,
-				bottom color=backBoxTitleTablaD,
+				top color=backTitleTable,
+				bottom color=backTitleTable,
 			}
 		}
 	}
