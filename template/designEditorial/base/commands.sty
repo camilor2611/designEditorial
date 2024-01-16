@@ -19,9 +19,9 @@
 	\setboolean{booleanActiveAppendix}{#1}
 }
 \newboolean{authorExist}
-\let\@chapterauthor\relax
-\newcommand\chapterauthor[1]{%
-	\gdef\@chapterauthor{
+\let\@chaptersubtitle\relax
+\newcommand\chaptersubtitle[1]{%
+	\gdef\@chaptersubtitle{
 		#1
 	}
 	\setboolean{authorExist}{true}
@@ -33,13 +33,13 @@
 \newcommand\nochapterimage{
 	\let\@chapterimage\relax
 }
-\newcommand\nochapterauthor{
+\newcommand\nochaptersubtitle{
 	\setboolean{authorExist}{false}
-	\let\@chapterauthor\relax
+	\let\@chaptersubtitle\relax
 }
 \newcommand\cleanalldata{
 	\nochapterimage
-	\nochapterauthor
+	\nochaptersubtitle
 	\typeappendix{false}
 	\forcetitlechapter{false}
 }
