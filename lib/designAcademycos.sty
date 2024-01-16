@@ -103,7 +103,7 @@
 \newcommand{\printtemplate}{\nametemplate}
 \newcommand{\pathtemplate}{\pathroottemplates\nametemplate}
 \newcommand\designacademycos[1]{\pgfqkeys{/DESIGNACADEMYCOSOPTIONS}{#1}}
-\newcommand\datemplate[1]{
+\newcommand\template[1]{
 	\IfFileExists{\pathtemplate/loadOptions.sty}{%
 		\RequirePackage{\pathtemplate/loadOptions}
 		\pgfqkeys{/DATEMPLATE}{#1}
