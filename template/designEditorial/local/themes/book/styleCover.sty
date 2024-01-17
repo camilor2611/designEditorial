@@ -68,6 +68,7 @@
 }
 
 \newcommand\getcover{
+	\renewcommand{\thepage}{Cover}
 	\IfFileExists{./src/cover/cover.tex}{
 		\import{./src/cover/}{cover.tex}
 	}{
